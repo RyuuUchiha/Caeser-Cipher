@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caeser</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+    
+</head>
+<body>
+    <h1 class="header">Caeser Cipher</h1>
+    <div class="content">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="encrypt-tab" data-bs-toggle="tab" data-bs-target="#Encrypt" type="button" role="tab" aria-controls="Encrypt" aria-selected="true">Encrypt</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="decrypt-tab" data-bs-toggle="tab" data-bs-target="#Decrypt" type="button" role="tab" aria-controls="Decrypt" aria-selected="false">Decrypt</button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="Encrypt" role="tabpanel" aria-labelledby="encrypt-tab">
+                <form>
+                    <div class="row mb-3" id="box">
+                      <label for="plainText" class="col-sm-2 col-form-label">Plain Text:</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control form-control-lg" id="plainText">
+                      </div>
+                    </div>
+                    <div class="row mb-3" id="box">
+                      <label for="shift" class="col-sm-2 col-form-label">Shift:</label>
+                      <div class="col-sm-10">
+                        <input type="number" class="form-control form-control-lg" id="shift">
+                      </div>
+                    </div>
+                    <div class="row mb-3" id="box">
+                        <label for="resultText" class="col-sm-2 col-form-label">Cipher text:</label>
+                        <div class="col-sm-10">
+                          <p id="resultText" class="form-control form-control-lg" style="background-color: rgba(255, 10, 10, 0.204);"></p>
+                        </div>
+                    </div>  
+                </form>
+                <button class="btn btn-danger"  onclick="encryptText()" style="margin-left: 50%;">Encrypt</button>
+            </div>
+
+            
+            <div class="tab-pane fade" id="Decrypt" role="tabpanel" aria-labelledby="decrypt-tab">
+                <form>
+                    <div class="row mb-3" id="box">
+                      <label for="cipherText" class="col-sm-2 col-form-label">Cipher text:</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control form-control-lg" id="cipherText">
+                      </div>
+                    </div>
+                    <div class="row mb-3" id="box">
+                      <label for="shift1" class="col-sm-2 col-form-label">Shift:</label>
+                      <div class="col-sm-10">
+                        <input type="number" class="form-control form-control-lg" id="shift1">
+                      </div>
+                    </div>
+                    <div class="row mb-3" id="box">
+                      <label for="resultText1" class="col-sm-2 col-form-label">Plain Text:</label>
+                      <div class="col-sm-10">
+                        <p id="resultText1" class="form-control form-control-lg" style="background-color: rgba(27, 92, 255, 0.247);"></p>
+                      </div>
+                    </div>  
+                </form>
+                <button class="btn btn-primary" onclick="decryptText()" style="margin-left: 50%;">Decrypt</button>
+            </div>
+          </div>
+    </div>  
+    <script src="index.js"></script>
+    
+</body>
+</html>
